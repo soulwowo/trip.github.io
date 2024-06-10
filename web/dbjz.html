@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自然风光</title>
+    <style>
+      body {
+        background: url(images/bg_1_.jpg) repeat-y;
+      }
+
+      header {
+        width: 70%;
+        height: 50px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        background-color: #3378d7;
+      }
+
+      header div {
+        height: 47px;
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header div:hover {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div:nth-of-type(4) {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div a,
+      header div a:hover,
+      header div a:link,
+      header div a:visited {
+        text-decoration: none;
+        color: white;
+        flex: 1;
+        font-size: 20px;
+      }
+
+      main {
+        width: 70%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .left {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        background-color: #f7f7f77f;
+        float: left;
+      }
+
+      ._left {
+        color: black;
+        font-size: 16px;
+        background-color: #f7f7f7cb;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+      }
+
+      ._left:hover {
+        width: auto;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+      }
+
+      ._leftx {
+        font-size: 16px;
+        width: auto;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+        border-radius: 20px;
+      }
+
+      #r1 {
+        position: relative;
+        float: right;
+        display: inline-block;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r2 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r3 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r4 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+      #r5 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+      #r6 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r1 img,
+      #r2 img,
+      #r3 img,
+      #r4 img,
+      #r5 img,
+      #r6 img {
+        width: 100%;
+        height: 500px;
+        
+        border-radius: 40px;
+      }
+
+      p {
+        text-indent: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      * {
+        font-size: 20px;
+      }
+      footer{
+      width: 70%;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      color: white;
+      background-color: #3378d7;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    footer div{
+      flex: 1;
+    }
+    img:hover{
+      scale: 1.2;
+    }
+    </style>
+    <script>
+      var leftid = ["l1", "l2", "l3", "l4","l5","l6"];
+      var rightid = ["r1", "r2", "r3", "r4","r5","r6"];
+      function change(id) {
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(leftid[i]).className = "_leftx";
+          else document.getElementById(leftid[i]).className = "_left";
+        }
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(rightid[i]).style.display = "inline-block";
+          else document.getElementById(rightid[i]).style.display = "none";
+        }
+      }
+      function hiddenelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "none";
+        return 1;
+      }
+      function showelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "inline-block";
+        return 1;
+      }
+      function changemain(id) {
+        document.getElementById(id).className = "_leftx";
+        return 1;
+      }
+      function changeelse(id) {
+        document.getElementById(id).className = "_left";
+        return 1;
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div><a href="index.html">主页</a></div>
+      <div><a href="zrfg.html">自然风光</a></div>
+      <div><a href="whls.html">文化历史</a></div>
+      <div><a href="dbjz.html">地标建筑</a></div>
+      <div><a href="tctj.html">特产推荐</a></div>
+      <div><a href="csxz.html">城市象征</a></div>
+      <div><a href="lxtj.html">路线推荐</a></div>
+      <div><a href="lxwm.html">联系我们</a></div>
+    </header>
+    <main>
+      <div class="left">
+        <div class="_leftx" id="l1" onclick="change('l1')">泉城广场</div>
+        <div class="_left" id="l2" onclick="change('l2')">山东美术馆</div>
+        <div class="_left" id="l3" onclick="change('l3')">济南绿地普利中心</div>
+        <div class="_left" id="l4" onclick="change('l4')">山东博物馆</div>
+        <div class="_left" id="l5" onclick="change('l5')">济南奥林匹克体育中心</div>
+        <div class="_left" id="l6" onclick="change('l6')">山东省会大剧院</div>
+      </div>
+      <div id="r1">
+        <img src="images\qcgc.webp" />
+        <p>
+          泉城广场是济南市的中心标志性建筑,位于繁华的市中心地带。广场的设计以“泉”为主题,中央的钢制雕塑和铁珠构成篆书“泉”字的形状,而广场中心的蓝色泉型雕塑更是济南市的象征。此外,泉城广场南接千佛山,北邻大明湖,西侧是趵突泉,东侧则是解放阁。广场还曾多次举办大型公益活动和宣传活动,吸引了众多国内外嘉宾和市民的目光。
+        </p>
+      </div>
+      <div id="r2">
+        <img src="images\msg.jpg" />
+        <p>
+          山东美术馆是山东省的文化地标,始建于1977年,位于济南经十路11777号。老馆位于济南青年东路,而新馆则是山东省承办第十届中国艺术节的重要场馆之一。这座美术馆以其先进的功能设施、高雅的艺术品位、优美的建筑形象和独特的文化内涵,展现了山东富有时代气息的标志性建筑特色。它不仅是省内的文化新地标,也吸引了众多市民前来游览、休憩和滋养艺术心灵。
+        </p>
+      </div>
+      <div id="r3">
+        <img src="images\plzx.webp" />
+        <p>
+          济南绿地普利中心是济南市的地标性建筑,高度达到303米,由全球顶级设计事务所SOM设计,灵感来源于济南的泉水。该建筑位于市中区普利街、顺河东街与共青团路的三角交汇处,总建筑面积197140平方米,包括商业、休闲、娱乐和办公功能,并与城市绿化立体坡地公园相结合。此外,该建筑在2018年被评为济南市物业管理优秀项目。
+        </p>
+      </div>
+      <div id="r4">
+        <img src="images\bwg.webp" />
+        <p>
+          山东博物馆是山东省的文化新地标,展示了齐鲁文化的魅力。这座博物馆成立于1954年,位于济南市文化西路,占地34000平方米,建筑面积21000平方米。其收藏丰富,特色在于陶瓷器、青铜器、书画、甲骨、简牍、汉画像石和古籍善本等。新馆建筑融合了中华传统文化中的天圆地方、天人合一的理念,顶部穹顶形似济南的泉水,展现了民族风格与现代艺术的完美结合。
+        </p>
+      </div>
+      <div id="r5">
+        <img src="images\alpk.webp" />
+        <p>
+          济南奥林匹克体育中心是济南东部新城的标志性建筑,位于历下区,占地81公顷,总建筑面积约35.7万平方米。该中心包括一座6万个席位的主体育场、一座1万个席位的体育馆、一座4000座席的网球馆、一座4000座席的游泳馆以及6万平方米的中心区平台广场。总体布局为“三足鼎立”、“东荷西柳”,不仅功能上能够满足各种赛事的要求,设计上也具有浓郁的地方文化特色。
+        </p>
+      </div>
+      <div id="r6">
+        <img src="images\djy.jpeg" />
+        <p>
+          山东省会大剧院位于济南西客站片区,是济南市的标志性文化设施。该剧院由著名法国设计师保罗·安德鲁主持设计,以“岱青海蓝”为设计理念。剧院内设有约1600座的歌剧院、1500座的音乐厅和500座的多功能厅,以及歌剧厅、音乐厅、演艺厅和配套功能用房。作为济南市的标志性建筑之一,它引领了齐鲁大地文化的新风潮,树立了孔孟之乡的文化新地标。
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div>版权所有©来守磊</div>
+    </footer>
+  </body>
+</html>

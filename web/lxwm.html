@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自然风光</title>
+    <style>
+      body {
+        background: url(images/bg_1_.jpg) repeat-y;
+      }
+
+      header {
+        width: 70%;
+        height: 50px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        background-color: #3378d7;
+      }
+
+      header div {
+        height: 47px;
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header div:hover {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div:nth-of-type(8) {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div a,
+      header div a:hover,
+      header div a:link,
+      header div a:visited {
+        text-decoration: none;
+        color: white;
+        flex: 1;
+        font-size: 20px;
+      }
+
+      main {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main #myform {
+        margin-top: 50px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      main #myform div {
+        flex: 1;
+        display: flex;
+        margin-top: 10px;
+      }
+
+      main #myform div div:nth-of-type(1) {
+        flex: 1;
+      }
+
+      main #myform div div:nth-of-type(2) {
+        flex: 2;
+      }
+
+      * {
+        font-size: 20px;
+      }
+
+      input,
+      select {
+        width: 300px;
+        height: 30px;
+      }
+
+      .button {
+        width: 150px;
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 60px;
+        background-color: #3378d7;
+      }
+
+      .button:hover {
+        background-color: #009af0;
+      }
+
+      textarea {
+        width: 300px;
+        height: 100px;
+      }
+      footer{
+      width: 70%;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      color: white;
+      background-color: #3378d7;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    footer div{
+      flex: 1;
+    }
+    img:hover{
+      scale: 1.2;
+    }
+    </style>
+    <script>
+      function get(){
+      var name=document.getElementById("mname").value;
+      var email=document.getElementById("email").value;
+      var tel=document.getElementById("tel").value;
+      var selection=document.getElementById("select").value;
+      var date=document.getElementById("date").value;
+      var bz=document.getElementById("bz").value;
+      alert("恭喜您，预约成功\n"+"您的姓名是:"+name+"\n您的电子邮件是:"+email+"\n您的电话是:"+tel+"\n您的选择是:"+selection+"\n您的预约日期是:"+date+"\n您的备注:"+bz+"已收到\n祝您旅行愉快!");
+      return ;
+      }
+      function clearly(){
+        var tag=confirm("确定要重置吗？");
+        if(tag== true){
+          document.getElementById("mname").value="";
+          document.getElementById("email").value="";
+          document.getElementById("tel").value="";
+          document.getElementById("date").value="";
+          document.getElementById("bz").value="";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div><a href="index.html">主页</a></div>
+      <div><a href="zrfg.html">自然风光</a></div>
+      <div><a href="whls.html">文化历史</a></div>
+      <div><a href="dbjz.html">地标建筑</a></div>
+      <div><a href="tctj.html">特产推荐</a></div>
+      <div><a href="csxz.html">城市象征</a></div>
+      <div><a href="lxtj.html">路线推荐</a></div>
+      <div><a href="lxwm.html">联系我们</a></div>
+    </header>
+    <main>
+      <form id="myform" action="lxwm.html" method="post" onSubmit="return get()" onReset="clearly()" >
+        <fieldset>
+          <legend>请填写您的预约信息！</legend>
+          <div>
+            <div>姓名：</div>
+            <div><input type="text" id="mname" required/></div>
+          </div>
+          <div>
+            <div>电子邮箱：</div>
+            <div><input type="email" id="email" required/></div>
+          </div>
+          <div>
+            <div>电话：</div>
+            <div><input type="tel" id="tel" required/></div>
+          </div>
+          <div>
+            <div>预约项目：</div>
+            <div>
+              <select id="select" required>
+                <option value="项目一,花费1000元">项目一</option>
+                <option value="项目二,花费890元">项目二</option>
+                <option value="项目三,花费840元">项目三</option>
+                <option value="项目四,花费928元">项目四</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div>预约日期：</div>
+            <div><input type="date" id="date" required/></div>
+          </div>
+          <div>
+            <div>备注：</div>
+            <div><textarea id="bz" required></textarea></div>
+          </div>
+          <div>
+            <div><input type="submit" class="button" value="预约"></div>
+            <div><input type="reset" class="button" value="重置"></div>
+          </div>
+          <div>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <div>版权所有©来守磊</div>
+    </footer>
+  </body>
+</html>

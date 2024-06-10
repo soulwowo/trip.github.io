@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自然风光</title>
+    <style>
+      body {
+        background: url(images/bg_1_.jpg) repeat-y;
+      }
+
+      header {
+        width: 70%;
+        height: 50px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        background-color: #3378d7;
+      }
+
+      header div {
+        height: 47px;
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header div:hover {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div:nth-of-type(6) {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div a,
+      header div a:hover,
+      header div a:link,
+      header div a:visited {
+        text-decoration: none;
+        color: white;
+        flex: 1;
+        font-size: 20px;
+      }
+
+      main {
+        width: 70%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .left {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        background-color: #f7f7f77f;
+        float: left;
+      }
+
+      ._left {
+        color: black;
+        font-size: 16px;
+        background-color: #f7f7f7cb;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+      }
+
+      ._left:hover {
+        width: auto;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+      }
+
+      ._leftx {
+        font-size: 16px;
+        width: auto;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+        border-radius: 20px;
+      }
+
+      #r1 {
+        position: relative;
+        float: right;
+        display: inline-block;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r2 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r3 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+      #r1 img,
+      #r2 img,
+      #r3 img {
+        width: 100%;
+        height: 500px;
+        border-radius: 40px;
+      }
+
+      p {
+        text-indent: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      * {
+        font-size: 20px;
+      }
+      footer{
+      width: 70%;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      color: white;
+      background-color: #3378d7;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    footer div{
+      flex: 1;
+    }
+    img:hover{
+      scale: 1.2;
+    }
+    </style>
+    <script>
+      var leftid = ["l1", "l2", "l3"];
+      var rightid = ["r1", "r2", "r3"];
+      function change(id) {
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(leftid[i]).className = "_leftx";
+          else document.getElementById(leftid[i]).className = "_left";
+        }
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(rightid[i]).style.display = "inline-block";
+          else document.getElementById(rightid[i]).style.display = "none";
+        }
+      }
+      function hiddenelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "none";
+        return 1;
+      }
+      function showelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "inline-block";
+        return 1;
+      }
+      function changemain(id) {
+        document.getElementById(id).className = "_leftx";
+        return 1;
+      }
+      function changeelse(id) {
+        document.getElementById(id).className = "_left";
+        return 1;
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div><a href="index.html">主页</a></div>
+      <div><a href="zrfg.html">自然风光</a></div>
+      <div><a href="whls.html">文化历史</a></div>
+      <div><a href="dbjz.html">地标建筑</a></div>
+      <div><a href="tctj.html">特产推荐</a></div>
+      <div><a href="csxz.html">城市象征</a></div>
+      <div><a href="lxtj.html">路线推荐</a></div>
+      <div><a href="lxwm.html">联系我们</a></div>
+      
+    </header>
+    <main>
+      <div class="left">
+        <div class="_leftx" id="l1" onclick="change('l1')">济南市市树</div>
+        <div class="_left" id="l2" onclick="change('l2')">济南市市花</div>
+        <div class="_left" id="l3" onclick="change('l3')">济南市市鸟</div>
+      </div>
+      <div id="r1">
+        <img src="images\tree.jpg" />
+        <p>
+          柳树是济南市的市树,将市树柳树设计成一个活泼可爱的小精灵,亮亮戴了一顶柳枝编的帽子,吹着柳哨,迈着欢快的步伐在奔跑。取名“亮亮”,亮字含哨声响亮的意思,又有光明的含义,寓意了济南辉煌灿烂的未来。 </p>
+      </div>
+      <div id="r2">
+        <img src="images\hh.jpg" />
+        <p>
+          荷花是济南市的市花,以荷花的花型变化成和和的头部,以荷花的花瓣变化成和和的四肢,以荷叶变化成和和的衣服,表现出济南泉水和荷花相映的美丽景色,突出了济南泉城的地方特点。
+        </p>
+      </div>
+      <div id="r3">
+        <img src="images\bl.webp" />
+        <p>
+          大白鹭是济南市的市鸟,是环保、高雅的象征。大白鹭是世界上最美丽的10种白鸟之一,它属于大型鹭类,腿脚都很长,全身颜色都是洁白的,美若天使！
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div>版权所有©来守磊</div>
+    </footer>
+  </body>
+</html>

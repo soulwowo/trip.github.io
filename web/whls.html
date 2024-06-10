@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自然风光</title>
+    <style>
+      body {
+        background: url(images/bg_1_.jpg) repeat-y;
+      }
+
+      header {
+        width: 70%;
+        height: 50px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        background-color: #3378d7;
+      }
+
+      header div {
+        height: 47px;
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header div:hover {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div:nth-of-type(3) {
+        background-color: #009af0;
+        border-bottom: #f1b619 3px solid;
+      }
+
+      header div a,
+      header div a:hover,
+      header div a:link,
+      header div a:visited {
+        text-decoration: none;
+        color: white;
+        flex: 1;
+        font-size: 20px;
+      }
+
+      main {
+        width: 70%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .left {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        background-color: #f7f7f77f;
+        float: left;
+      }
+
+      ._left {
+        color: black;
+        font-size: 16px;
+        background-color: #f7f7f7cb;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+      }
+
+      ._left:hover {
+        width: auto;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+      }
+
+      ._leftx {
+        font-size: 16px;
+        width:  auto;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: #3378d7;
+        color: white;
+        border-left: #f1b619 10px solid;
+        border-radius: 20px;
+      }
+
+      #r1 {
+        position: relative;
+        float: right;
+        display: inline-block;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r2 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r3 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r4 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+      #r5 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+      #r6 {
+        position: relative;
+        float: right;
+        display: none;
+        width: 70%;
+        background-color: #f7f7f77f;
+      }
+
+      #r1 img,
+      #r2 img,
+      #r3 img,
+      #r4 img,
+      #r5 img,
+      #r6 img {
+        width: 100%;
+        height: 500px;
+        border-radius: 40px;
+      }
+
+      p {
+        text-indent: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      * {
+        font-size: 20px;
+      }
+      footer{
+      width: 70%;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      color: white;
+      background-color: #3378d7;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    footer div{
+      flex: 1;
+    }
+    img:hover{
+      scale: 1.2;
+    }
+    </style>
+    <script>
+      var leftid = ["l1", "l2", "l3", "l4","l5","l6"];
+      var rightid = ["r1", "r2", "r3", "r4","r5","r6"];
+      function change(id) {
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(leftid[i]).className = "_leftx";
+          else document.getElementById(leftid[i]).className = "_left";
+        }
+        for (i = 0; i < leftid.length; i++) {
+          if (id == leftid[i])
+            document.getElementById(rightid[i]).style.display = "inline-block";
+          else document.getElementById(rightid[i]).style.display = "none";
+        }
+      }
+      function hiddenelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "none";
+        return 1;
+      }
+      function showelem(id) {
+        x = document.getElementById(id);
+        x.style.display = "inline-block";
+        return 1;
+      }
+      function changemain(id) {
+        document.getElementById(id).className = "_leftx";
+        return 1;
+      }
+      function changeelse(id) {
+        document.getElementById(id).className = "_left";
+        return 1;
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div><a href="index.html">主页</a></div>
+      <div><a href="zrfg.html">自然风光</a></div>
+      <div><a href="whls.html">文化历史</a></div>
+      <div><a href="dbjz.html">地标建筑</a></div>
+      <div><a href="tctj.html">特产推荐</a></div>
+      <div><a href="csxz.html">城市象征</a></div>
+      <div><a href="lxtj.html">路线推荐</a></div>
+      <div><a href="lxwm.html">联系我们</a></div>
+    </header>
+    <main>
+      <div class="left">
+        <div class="_leftx" id="l1" onclick="change('l1')">洪家楼天主教堂</div>
+        <div class="_left" id="l2" onclick="change('l2')">李清照纪念堂</div>
+        <div class="_left" id="l3" onclick="change('l3')">解放阁</div>
+        <div class="_left" id="l4" onclick="change('l4')">济南府学文庙</div>
+        <div class="_left" id="l5" onclick="change('l5')">老舍故居</div>
+        <div class="_left" id="l6" onclick="change('l6')">神通寺</div>
+      </div>
+      <div id="r1">
+        <img src="images\hjl.webp" />
+        <p>
+          洪家楼天主教堂是利用光绪二十六年(1900年)《辛丑条约》的庚子赔款筹建的,由奥地利庞会襄修士设计、中国劳工承建。光绪二十七年(1901年)开工建设,历经3年多时间,于光绪三十一年(1905年)5月竣工。整个建筑坐东朝西,立面为典型的哥特式建筑风格,平面呈“十字形”,象征着天主耶稣受难的十字架。建筑面积约2600平方米,教堂大厅可容纳千人进行宗教活动。
+        </p>
+        <p>
+          洪家楼天主教堂建成时是济南市也是华北地区规模最大的天主教堂,在中国近代宗教建筑中占有重要地位。2000年,被评为山东省优秀建筑。2006年5月,被国务院列为第六批全国重点文物保护单位。
+        </p>
+      </div>
+      <div id="r2">
+        <img src="images\lqzjnt.webp" />
+        <p>
+          清照词园是一处“园在水中、水在园中、景在词中、词在景中”的山水人文园林景观,堪称“中国第一词园”。该园由全国著名园林设计专家周培正先生设计。总占地面积为18000平方米,总建筑面积1300平方米,包括吟风榭、文书斋、漱玉堂、海棠轩、燕寝凝香、碑廊、易安楼等15组建筑
+        </p>
+      </div>
+      <div id="r3">
+        <img src="images\jfg.webp" />
+        <p>
+          解放阁是“泉城”济南的著名景点,位于原济南旧城城墙东南角,黑虎泉东侧,隔护城河与黑虎泉相望。阁址为解放战争济南战役期间,中国人民解放军于1948年9月24日攻克济南时的攻城突破口处。后旧城城墙因城市建设而拆除时,济南人民特意在这里的旧城址上,建起了巍峨壮观的解放阁,以纪念济南解放。1965年建成10米高的石砌台基,后因“文化大革命”停建。1985年于台上建阁,1986年9月24日落成。
+        </p>
+      </div>
+      <div id="r4">
+        <img src="images\wxm.webp" />
+        <p>
+          济南府学文庙坐落于山东省济南市历下区明湖路248号,济南府学文庙南接芙蓉街,北临大明湖。济南府学文庙创建于宋熙宁(1068-1077年)年间。元末倾塌。明洪武二年(1369年)重建。到了清代,也多次对文庙进行修整,但基本保持了明朝文庙的规模和建筑布局。中华人民共和国成立后,济南府学文庙被小学、工厂等占用,许多建筑被毁。
+        </p>
+        <p>
+          1992年,济南府学文庙成为山东省文物保护单位,2005年开始进行大修,残存的古建筑被修复,被拆除的部分也得到复建。修复后的文庙,恢复了祭孔的功能,并成为济南历史文化保护区的核心部分。2021年10月,入选《济南市第一批传统地名保护名录》
+        </p>
+      </div>
+      <div id="r5">
+        <img src="images\ls.webp" />
+        <p>
+          1934 年 9 月,老舍接受了山东大学文学院的聘约,全家移居青岛,居住在山大后身莱芜路（现登州路 10 号甲）的一所洋式平房里。 1936 年搬字到黄县路 2 号二层楼的一层,居住一年多。夏天,老舍辞去了山大的教职,开始成为职业作家。著名的长篇小说《骆驼祥子》,就是在这里创作完成的。
+        </p>
+      </div>
+      <div id="r6">
+        <img src="images\sts.webp" />
+        <p>
+          神通寺位于山东省济南历城县柳埠青龙山麓,为古代名刹,也是山东佛教的发祥地。原名郎公寺,约建于东晋初,前秦皇始元年(公元351年),开山祖师为僧朗公禅师。原寺以门楼、大雄宝殿、千佛殿、方丈禅堂、法堂为中轴线,左右以伽蓝、达摩配殿及斋廊为翼,至清末庙宇尽毁,仅有数座古塔与墓塔林立于该寺遗址之处。
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div>版权所有©来守磊</div>
+    </footer>
+  </body>
+</html>

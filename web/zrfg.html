@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自然风光</title>
+  <style>
+    body {
+      background: url(images/bg_1_.jpg) repeat-y;
+    }
+
+    header {
+      width: 70%;
+      height: 50px;
+      margin-top: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      background-color: #3378d7;
+    }
+
+    header div {
+      height: 47px;
+      display: flex;
+      flex: 1;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header div:hover {
+      background-color: #009af0;
+      border-bottom: #f1b619 3px solid;
+    }
+
+    header div:nth-of-type(2) {
+      background-color: #009af0;
+      border-bottom: #f1b619 3px solid;
+    }
+
+    header div a,
+    header div a:hover,
+    header div a:link,
+    header div a:visited {
+      text-decoration: none;
+      color: white;
+      flex: 1;
+      font-size: 20px;
+    }
+
+    main {
+      width: 70%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .left {
+      position: relative;
+      display: inline-block;
+      width: 25%;
+      background-color: #f7f7f77f;
+      float: left;
+
+    }
+
+    ._left {
+      color: black;
+      font-size: 16px;
+      background-color: #f7f7f7cb;
+      width: 100%;
+      height: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    ._left:hover {
+      width: auto;
+      background-color: #3378d7;
+      color: white;
+      border-left: #f1b619 10px solid;
+    }
+
+    ._leftx {
+      font-size: 16px;
+      width: auto;
+      height: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      background-color: #3378d7;
+      color: white;
+      border-left: #f1b619 10px solid;
+      border-radius: 20px;
+    }
+
+    #r1 {
+      position: relative;
+      float: right;
+      display: inline-block;
+      width: 70%;
+      background-color: #f7f7f77f;
+    }
+
+    #r2 {
+      position: relative;
+      float: right;
+      display: none;
+      width: 70%;
+      background-color: #f7f7f77f;
+    }
+
+    #r3 {
+      position: relative;
+      float: right;
+      display: none;
+      width: 70%;
+      background-color: #f7f7f77f;
+    }
+
+    #r4 {
+      position: relative;
+      float: right;
+      display: none;
+      width: 70%;
+      background-color: #f7f7f77f;
+    }
+
+    #r1 img,
+    #r2 img,
+    #r3 img,
+    #r4 img {
+      width: 100%;
+      height: 500px;
+      border-radius: 40px;
+    }
+
+    p {
+      text-indent: 2em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    * {
+      font-size: 20px;
+    }
+    footer{
+      width: 70%;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      color: white;
+      background-color: #3378d7;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    footer div{
+      flex: 1;
+    }
+    img:hover{
+      scale: 1.2;
+    }
+  </style>
+  <script>
+    var leftid = ["l1", "l2", "l3", "l4"];
+    var rightid = ["r1", "r2", "r3", "r4"];
+    function change(id) {
+      for (i = 0; i < leftid.length; i++) {
+        if (id == leftid[i])
+          document.getElementById(leftid[i]).className = "_leftx";
+        else
+          document.getElementById(leftid[i]).className = "_left";
+      }
+      for (i = 0; i < leftid.length; i++) {
+        if (id == leftid[i])
+          document.getElementById(rightid[i]).style.display = 'inline-block';
+        else
+          document.getElementById(rightid[i]).style.display = 'none';
+      }
+    }
+    function hiddenelem(id) {
+      x = document.getElementById(id);
+      x.style.display = 'none';
+      return 1;
+    }
+    function showelem(id) {
+      x = document.getElementById(id);
+      x.style.display = 'inline-block';
+      return 1;
+    }
+    function changemain(id) {
+      document.getElementById(id).className = "_leftx";
+      return 1;
+    }
+    function changeelse(id) {
+      document.getElementById(id).className = "_left";
+      return 1;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div><a href="index.html">主页</a></div>
+    <div><a href="zrfg.html">自然风光</a></div>
+    <div><a href="whls.html">文化历史</a></div>
+    <div><a href="dbjz.html">地标建筑</a></div>
+    <div><a href="tctj.html">特产推荐</a></div>
+    <div><a href="csxz.html">城市象征</a></div>
+    <div><a href="lxtj.html">路线推荐</a></div>
+    <div><a href="lxwm.html">联系我们</a></div>
+  </header>
+  <main>
+    <div class="left">
+      <div class="_leftx" id="l1" onclick="change('l1')">趵突泉</div>
+      <div class="_left" id="l2" onclick="change('l2')">大明湖</div>
+      <div class="_left" id="l3" onclick="change('l3')">千佛山</div>
+      <div class="_left" id="l4" onclick="change('l4')">黑虎泉</div>
+    </div>
+    <div id="r1">
+      <img src="images\btq.webp">
+      <p>趵突泉(Baotu Spring),济南三大名胜之一,位于山东省济南市历下区,东临泉城广场,北望五龙潭,面积达158亩,位居济南七十二名泉之冠。乾隆皇帝南巡时因趵突泉水泡茶味醇甘美,曾册封趵突泉为“天下第一泉”。也是最早见于古代文献的济南名泉。</p>
+    </div>
+    <div id="r2">
+      <img src="images\dmh.webp">
+      <p>大明湖,山东省济南市区湖泊、济南三大历史名胜之一。位于山东省济南市历下区旧城区北部,是由济南众多泉水汇流而成,湖水经泺水河注入小清河。水面面积57.7公顷,水深平均2~3米。大明湖景色优美秀丽,湖水水色澄碧,是国家5A级旅游景区——天下第一泉风景区的核心组成部分之一。</p>
+      <p>大明湖历史悠久,纪念古人政绩、行踪的建筑以及自然景观很多,诸如历下亭、铁公祠、小沧浪、北极阁、汇波楼、南丰祠、遐园、稼轩祠等,引得历代文人前来凭吊、吟咏。唐代以后的历代诗人,都留下了著名的诗篇。</p>
+    </div>
+    <div id="r3">
+      <img src="images\qfs.jpg">
+      <p>千佛山位于山东省济南市历下区,是济南三大名胜之一,古称历山。隋开皇年间(581年一600年),因佛教盛行,随山势雕刻了数千佛像,故称千佛山。千佛山是泰山的余脉,海拔285米,占地166.1公顷,距济南市中心2.5公里,位于山东省济南市中心南部,与趵突泉、大明湖并称济南三大名胜,是国家AAAA级旅游景区,是第九批国家级风景名胜区。</p>
+    </div>
+    <div id="r4">
+      <img src="images\hhq.webp">
+      <p>黑虎泉,属小清河支流东泺河水系、黑虎泉泉群。位于山东省济南市历下区解放阁南护城河南岸陡崖下,在济南市黑虎泉西路。因泉水涌出,湍击巨石,发出粗犷的鸣响,酷似虎啸,故名。明代嘉靖年间,黑虎泉洞穴的上方曾建有黑虎庙,庙内供奉着“赵公明”。</p>
+      <p>黑虎泉为一天然洞穴,高2米,深3米,宽1.7米,泉水主要来自洞穴的东南方向。洞穴由青石垒砌,洞穴隐露在岩壁下。泉池由石块砌成,略呈长方形,宽约17米,深约3米。泉池南壁并列3个石雕虎头。泉水流过暗沟,经3个石虎口喷出。涌水量最大每日4.1万立方米,仅次于趵突泉。</p>
+    </div>
+  </main>
+  <footer>
+    <div>版权所有©来守磊</div>
+  </footer>
+</body>
+
+</html>
